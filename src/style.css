@@ -1,0 +1,36 @@
+:root{
+  --primary: #7AE582;  
+}
+
+*{
+  padding: 0;
+  margin: 0;      
+}
+
+li{
+  list-style: none;
+  padding-top: 10px;
+}
+            
+h1{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;               
+}
+
+strong{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+        
+p{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 200;          
+}
+
+.buttonPrimary{
+  background: var(--primary);
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+}
