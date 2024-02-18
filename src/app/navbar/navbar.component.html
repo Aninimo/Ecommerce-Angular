@@ -1,0 +1,36 @@
+<div class='navbar'>
+  <div class='menu-toggle' (click)='toggleMenu()'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class='menu-items' [class.active]='menuOpen'>
+    <a href='#home'>Home</a>
+    <a href='#whyUs'>Why us</a>
+    <a href='#menu'>Menu</a>
+    <a href='#reviews'>Reviews</a>
+    <a href='#footer'>Contact</a>
+  </div>
+  <div class='cart-container' (click)='toggleCartItems()'>
+    <div class='cart-icon'>cart</div>
+    <div class='menu' [class.active]='showCartItems'>
+      <div *ngIf='cart.items.length'>
+        <div *ngFor='let item of cart.items'>
+          <div class='cardCart'>
+            <div>
+              <img 
+                src="{{ item.product }}" 
+                class='img'      
+              /> 
+              {{ item.name }} x {{ item.quantity }} <span class='price'>R${{ item.price }}</span>
+            </div>
+          </div>
+        </div>
+        <span>{{ getTotal(cart.items) | currency }}</span>
+      </div>
+      <button (click)='onCheckout()'>
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>
