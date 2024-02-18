@@ -1,0 +1,29 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+strong{
+  font-weight: bold;        
+}
+
+.logos{
+  display: flex;
+  gap: 15px;
+}
+
+.logo{
+  width: 30px;      
+}
+
+@media screen and (max-width: 767px) {
+  .footer{
+    flex-direction: column;
+    justify-content: center;
+  }
+                
+  ul{
+    margin-bottom: 20px;
+  }
+}
