@@ -1,0 +1,25 @@
+<div class='container'>
+  <h2>Explore Our Menu</h2>
+  <div *ngIf='products && products.length'>
+    <div class='grid'>
+      <div *ngFor='let product of products'>
+        <div class='card'>
+          <img 
+            [src]='product.image'
+            class='img'      
+          /> 
+          <div class='bottomCard'>
+            <p>{{ product.name }}</p>
+            <button 
+              (click)='onAddToCart(product)'
+              class='button'>+</button>
+          </div>
+          <p class='price'>R${{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf='!products || products.length === 0'>
+    <p>Nenhum produto encontrado.</p>
+  </div>
+</div>
