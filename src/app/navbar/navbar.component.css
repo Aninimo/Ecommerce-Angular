@@ -1,0 +1,90 @@
+.navbar {  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;        
+  background: black;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+}
+            
+.menu-items a:hover {
+  text-decoration: underline;
+}
+
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  width: 150px;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.menu.active {
+  display: block;
+} 
+                   
+.cardCart{
+  margin-bottom: 15px;  
+}
+
+.price{
+  color: var(--primary);
+}
+
+.img{
+  width: 50px;  
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--primary);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+}
