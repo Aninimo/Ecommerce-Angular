@@ -1,0 +1,32 @@
+.container{
+  text-align: center;  
+  padding: 20px;
+  margin-top: 15px;
+}
+        
+img{
+  width: 40px;
+  border-radius: 50px;
+}
+
+.cards{
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.cardHead{
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+}
+        
+p{
+  margin-top: 10px;        
+}
+
+@media screen and (max-width: 767px) {
+  .cards{
+    flex-direction: column;
+  }
+}
