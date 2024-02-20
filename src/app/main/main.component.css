@@ -17,6 +17,19 @@ span{
   color: var(--primary);
 }
 
+.circle{
+  width: 230px;
+  height: 230px;
+  background: var(--primary);
+  border-radius: 50%;  
+}
+
+img{
+  position: absolute;
+  left: 61.60%;
+  top: 6.58%;
+}
+
 @media screen and (max-width: 767px) {
   .container{
     flex-direction: column;
@@ -24,8 +37,13 @@ span{
     text-align: center;
     margin-bottom: 20px;
   }
-                        
+                      
+  .circle{
+    margin-top: 20px;
+  }        
+  
   img{
-    margin-top: 10px
+    top: 20.60%;
+    left: 33%;
   }
 }
